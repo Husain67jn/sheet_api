@@ -14,6 +14,9 @@ app.post("/api/add-booking", async (req, res) => {
       },
       scopes: ["https://www.googleapis.com/auth/spreadsheets"],
     });
+app.get('/health', (req, res) => {
+  res.json({ ok: true });
+});
 
     const sheets = google.sheets({ version: "v4", auth });
 
